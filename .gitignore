@@ -8,3 +8,9 @@ temp/
 *.env
 !config/development.env
 !config/local.env
+
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
+*.tfbackend
