@@ -1,13 +1,5 @@
 .idea/
 .vscode/
-node_modules/
-build/
-tmp/
-temp/
-
-*.env
-!config/development.env
-!config/local.env
 
 .terraform/
 terraform.tfstate

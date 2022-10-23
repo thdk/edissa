@@ -1,0 +1,7 @@
+build/
+tmp/
+temp/
+
+*.env
+!config/development.env
+!config/local.env
