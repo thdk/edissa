@@ -22,7 +22,7 @@ import gcpConfig from './config/gcp.config';
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => {
-        const spannerOptions = configService.get<SpannerConnectionOptions>(
+        const databaseOptions = configService.get<SpannerConnectionOptions>(
           'database',
           { infer: true },
         );
@@ -33,11 +33,8 @@ import gcpConfig from './config/gcp.config';
 
         return {
           autoLoadEntities: true,
-          synchronize: true,
-          ...spannerOptions,
+          ...databaseOptions,
           projectId,
-          // logger: 'advanced-console',
-          // logging: '',
         };
       },
     }),
